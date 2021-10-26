@@ -1,0 +1,6 @@
+#!/usr/bin/bash
+spotify &
+/usr/lib/xfce-polkit/xfce-polkit &
+deadd-notification-center &
+greenclip daemon &
+/home/angel/.rofi-themes/main-export &

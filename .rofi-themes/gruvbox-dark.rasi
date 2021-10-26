@@ -1,0 +1,155 @@
+/* ==========================================================================
+   Rofi color theme
+
+   Based on the Gruvbox color scheme for Vim by morhetz
+   https://github.com/morhetz/gruvbox
+
+   File: gruvbox-dark.rasi
+   Desc: Gruvbox dark color theme for Rofi
+   Author: bardisty <b@bah.im>
+   Source: https://github.com/bardisty/gruvbox-rofi
+   Modified: Mon Feb 12 2018 04:08:43 PST -0800
+   ========================================================================== */
+@import "font.rasi"
+@import "colors.rasi"
+
+* {
+    /* Theme settings */
+    highlight: bold italic;
+    scrollbar: true;
+
+    /* Gruvbox dark colors */
+    gruvbox-dark-bg0:          #000000FF;
+    gruvbox-dark-bg0-soft:     #000000FF;
+    gruvbox-dark-bg3:          #575757;
+    gruvbox-dark-fg0:          #ffffff;
+    gruvbox-dark-fg1:          #ffffff;
+    gruvbox-dark-red-dark:     #cc241d;
+    gruvbox-dark-red-light:    #fb4934;
+    gruvbox-dark-yellow-dark:  #d79921;
+    gruvbox-dark-yellow-light: #fabd2f;
+    gruvbox-dark-gray:         #000000FF;
+
+    /* Theme colors */
+    background:                  @gruvbox-dark-bg0;
+    background-color:            @background;
+    foreground:                  @gruvbox-dark-fg1;
+    border-color:                @gruvbox-dark-gray;
+    separatorcolor:              @border-color;
+    scrollbar-handle:            @border-color;
+
+    normal-background:           @background;
+    normal-foreground:           @foreground;
+    alternate-normal-background: @gruvbox-dark-bg0-soft;
+    alternate-normal-foreground: @foreground;
+    selected-normal-background:  @gruvbox-dark-bg3;
+    selected-normal-foreground:  @gruvbox-dark-fg0;
+
+    active-background:           @gruvbox-dark-yellow-dark;
+    active-foreground:           @background;
+    alternate-active-background: @active-background;
+    alternate-active-foreground: @active-foreground;
+    selected-active-background:  @gruvbox-dark-yellow-light;
+    selected-active-foreground:  @active-foreground;
+
+    urgent-background:           @gruvbox-dark-red-dark;
+    urgent-foreground:           @background;
+    alternate-urgent-background: @urgent-background;
+    alternate-urgent-foreground: @urgent-foreground;
+    selected-urgent-background:  @gruvbox-dark-red-light;
+    selected-urgent-foreground:  @urgent-foreground;
+}
+
+window {
+    transparency:                   "real";
+    background-color:               @BG;
+    text-color:                     @FG;
+    border:                  		0px;
+    border-color:                  	@BGA;
+    border-radius:                  10px;
+    width:                          400px;
+    height:                         600px;
+    x-offset:                       50;
+    y-offset:                       -50px;
+}
+
+prompt {
+    enabled: 						true;
+	margin: 						0px 0px 0px 0px;
+	padding: 						8px;
+	background-color: 				@SEL;
+	text-color: 					@BGA;
+    border:                  		0px 0px 0px 0px;
+    border-color:                  	@BDR;
+    border-radius:                  0px 4px 4px 0px;
+}
+
+entry {
+    background-color:               @BGA;
+    text-color:                     @FG;
+    placeholder-color:              @FG;
+    expand:                         true;
+    horizontal-align:               0;
+    placeholder:                    "Aplication Search";
+    blink:                          true;
+    border:                  		0px 0px 0px 0px;
+    border-color:                  	@BDR;
+    border-radius:                  10px;
+    padding:                        8px;
+}
+
+textbox-prompt-colon {
+	expand: 						false;
+	str: 							"";
+    border-radius:                  4px;
+    background-color:               @SEL;
+    text-color:                     @BGA;
+    padding:                        8px 10px 8px 12px;
+	font:							"Iosevka Nerd Font 10";
+}
+
+inputbar {
+	children: 						[ textbox-prompt-colon, entry ];
+    spacing:                        0px;
+    background-color:               @BGA;
+    text-color:                     @FG;
+    expand:                         false;
+    border:                  		1px 1px 1px 1px;
+    border-radius:                  4px;
+    border-color:                  	@BDR;
+    margin:                         0px 0px 0px 0px;
+    padding:                        0px;
+    position:                       center;
+}
+
+case-indicator {
+    background-color:               @BG;
+    text-color:                     @FG;
+    spacing:                        0;
+}
+
+
+listview {
+    background-color:               #00000000;
+    columns:                        1;
+    lines:							7;
+    spacing:                        4px;
+    cycle:                          true;
+    dynamic:                        true;
+    layout:                         vertical;
+}
+
+
+element {
+    background-color:               #00000000;
+    text-color:                     @FG;
+    orientation:                    horizontal;
+    border-radius:                  4px;
+    padding:                        6px 6px 6px 6px;
+}
+
+
+
+
+@import "gruvbox-common.rasi"
+

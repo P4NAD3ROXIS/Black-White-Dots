@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+export GOOGLE_ARGS='["--count", 5]'
+export ROFI_SEARCH='googler'
